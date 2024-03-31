@@ -18,6 +18,9 @@
 # 0041-Stop-sending-hidden-resources-to-the-client.patch
 #   Extra visibility fix
 #   RM #350
+# 0051-Adjust-nationality-of-remaining-units-after-player-r.patch
+#   Fix to player removal
+#   RM #383
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -45,6 +48,7 @@ declare -a PATCHLIST=(
   "backports/0025-Purge-worklist-items-with-unfulfilled-local-range-im"
   "backports/0002-Fix-allied-victory-of-all-players"
   "backports/0041-Stop-sending-hidden-resources-to-the-client"
+  "backports/0051-Adjust-nationality-of-remaining-units-after-player-r"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
