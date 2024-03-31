@@ -6,9 +6,6 @@
 # https://osdn.net/projects/freeciv/ticket/?????
 # https://redmine.freeciv.org/issues/???
 #
-# 0023-Improve-connecthand.-ch-coding-style.patch
-#   Set baseline for freeciv-web patches
-#   RM #264
 # 0023-Fix-activity2char-assert-failure.patch
 #   Savegame loading fix
 #   RM #305
@@ -44,7 +41,6 @@ declare -a GIT_PATCHLIST=(
 )
 
 declare -a PATCHLIST=(
-  "backports/0023-Improve-connecthand.-ch-coding-style"
   "backports/0023-Fix-activity2char-assert-failure"
   "backports/0025-Purge-worklist-items-with-unfulfilled-local-range-im"
   "backports/0002-Fix-allied-victory-of-all-players"
