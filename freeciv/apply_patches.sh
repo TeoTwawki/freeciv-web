@@ -21,6 +21,9 @@
 # 0051-Adjust-nationality-of-remaining-units-after-player-r.patch
 #   Fix to player removal
 #   RM #383
+# 0038-AI-Delay-war-declaration-until-really-revolted.patch
+#   AI senate dismissal fix
+#   osdn #48018
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -49,6 +52,7 @@ declare -a PATCHLIST=(
   "backports/0002-Fix-allied-victory-of-all-players"
   "backports/0041-Stop-sending-hidden-resources-to-the-client"
   "backports/0051-Adjust-nationality-of-remaining-units-after-player-r"
+  "backports/0038-AI-Delay-war-declaration-until-really-revolted"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
