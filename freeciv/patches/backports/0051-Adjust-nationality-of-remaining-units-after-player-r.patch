@@ -1,0 +1,56 @@
+From d9e61b2de945fc3cb8f934c6b514f5b4f441b1bd Mon Sep 17 00:00:00 2001
+From: Marko Lindqvist <cazfi74@gmail.com>
+Date: Sun, 31 Mar 2024 18:34:19 +0300
+Subject: [PATCH 51/57] Adjust nationality of remaining units after player
+ removal
+
+Nationality of the units owned by other players could
+previously be that of removed player, leading to a crash.
+Now switch nationality of such units to that of their
+current owner when player of their nationality is removed.
+
+See RM #383
+
+Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
+---
+ common/player.c | 17 +++++++++++++++--
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+
+diff --git a/common/player.c b/common/player.c
+index d539a79dad..209b9c6571 100644
+--- a/common/player.c
++++ b/common/player.c
+@@ -659,8 +659,12 @@ void player_set_color(struct player *pplayer,
+ }
+ 
+ /*******************************************************************//**
+-  Clear all player data. If full is set, then the nation and the team will
+-  be cleared too.
++  Clear all player data.
++
++  If full is set, also
++  - The nation is cleared
++  - The team is cleared
++  - Nationality information of remaining units is adjusted
+ ***********************************************************************/
+ void player_clear(struct player *pplayer, bool full)
+ {
+@@ -717,6 +721,15 @@ void player_clear(struct player *pplayer, bool full)
+   if (full) {
+     team_remove_player(pplayer);
+ 
++    players_iterate_alive(owner) {
++      unit_list_iterate(owner->units, owned) {
++        if (unit_nationality(owned) == pplayer) {
++          /* Switch nationality to that of current owner. */
++          owned->nationality = owner;
++        }
++      } unit_list_iterate_end;
++    } players_iterate_alive_end;
++
+     /* This comes last because log calls in the above functions
+      * may use it. */
+     if (pplayer->nation != NULL) {
+-- 
+2.43.0
+
