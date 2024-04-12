@@ -1,0 +1,51 @@
+From 940ce754eba1d509a24b11427f715e8ef2306075 Mon Sep 17 00:00:00 2001
+From: Marko Lindqvist <cazfi74@gmail.com>
+Date: Sun, 7 Apr 2024 00:35:33 +0300
+Subject: [PATCH 53/53] AI: Fix bad city spot value calculation with unknown
+ tiles
+
+Unknown and already worked tiles counted as negative output value.
+Now they count as 0, as they cannot produce anything for the city.
+
+See RM #408
+
+Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
+---
+ ai/default/daisettler.c | 15 ++++++++++-----
+ 1 file changed, 10 insertions(+), 5 deletions(-)
+
+diff --git a/ai/default/daisettler.c b/ai/default/daisettler.c
+index 7372167d81..3395dfa9e8 100644
+--- a/ai/default/daisettler.c
++++ b/ai/default/daisettler.c
+@@ -374,17 +374,22 @@ static struct cityresult *cityresult_fill(struct ai_type *ait,
+       result->best_other.tile = ptile;
+       result->best_other.cindex = cindex;
+     } else if (ptdc->sum > result->best_other.tdc->sum) {
+-      /* First add other other to remaining */
+-      result->remaining += result->best_other.tdc->sum
+-                           / GROWTH_POTENTIAL_DEEMPHASIS;
++      /* First add other other to remaining, unless it's unavailable (value < 0) tile. */
++      if (result->best_other.tdc->sum > 0) {
++        result->remaining += result->best_other.tdc->sum
++                             / GROWTH_POTENTIAL_DEEMPHASIS;
++      }
+       /* Then make new best other */
+       result->best_other.tdc = ptdc;
+       result->best_other.tile = ptile;
+       result->best_other.cindex = cindex;
+     } else {
+       /* Save total remaining calculation, divided by crowdedness
+-       * of the area and the emphasis placed on space for growth. */
+-      result->remaining += ptdc->sum / GROWTH_POTENTIAL_DEEMPHASIS;
++       * of the area and the emphasis placed on space for growth.
++       * Do not add unavailable (value < 0) tiles. */
++      if (ptdc->sum > 0) {
++        result->remaining += ptdc->sum / GROWTH_POTENTIAL_DEEMPHASIS;
++      }
+     }
+ 
+     tile_data_cache_hash_replace(result->tdc_hash, cindex, ptdc);
+-- 
+2.43.0
+
