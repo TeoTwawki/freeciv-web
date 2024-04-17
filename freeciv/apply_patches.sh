@@ -24,6 +24,9 @@
 # 0050-Initialize-extra-before-calling-unit_assign_specific.patch
 #   Pillage crash fix
 #   RM #460
+# 0050-savegame-Fix-loading-invalid-resources-on-FoW-map.patch
+#   Savegame resources loading fix
+#   RM #463
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -53,6 +56,7 @@ declare -a PATCHLIST=(
   "backports/0053-AI-Fix-bad-city-spot-value-calculation-with-unknown-"
   "backports/0034-update_bulbs-Fix-research-researching_saved-research"
   "backports/0050-Initialize-extra-before-calling-unit_assign_specific"
+  "backports/0050-savegame-Fix-loading-invalid-resources-on-FoW-map"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
