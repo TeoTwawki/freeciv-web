@@ -18,6 +18,9 @@
 # 0053-AI-Fix-bad-city-spot-value-calculation-with-unknown-.patch
 #   AI city spot evaluation fix
 #   RM #408
+# 0034-update_bulbs-Fix-research-researching_saved-research.patch
+#   Fix to research assert failure
+#   RM #449
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -45,6 +48,7 @@ declare -a PATCHLIST=(
   "backports/0051-Adjust-nationality-of-remaining-units-after-player-r"
   "backports/0038-AI-Delay-war-declaration-until-really-revolted"
   "backports/0053-AI-Fix-bad-city-spot-value-calculation-with-unknown-"
+  "backports/0034-update_bulbs-Fix-research-researching_saved-research"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
