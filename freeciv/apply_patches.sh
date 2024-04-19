@@ -24,6 +24,9 @@
 # 0050-savegame-Fix-loading-invalid-resources-on-FoW-map.patch
 #   Savegame resources loading fix
 #   RM #463
+# 0054-Fix-inconsistent-city-workers-after-vision-loss.patch
+#   Fix to inconsistent city state
+#   RM #472
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -53,6 +56,7 @@ declare -a PATCHLIST=(
   "backports/0034-update_bulbs-Fix-research-researching_saved-research"
   "backports/0050-Initialize-extra-before-calling-unit_assign_specific"
   "backports/0050-savegame-Fix-loading-invalid-resources-on-FoW-map"
+  "backports/0054-Fix-inconsistent-city-workers-after-vision-loss"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
