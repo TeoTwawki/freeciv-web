@@ -27,6 +27,9 @@
 # 0054-Fix-inconsistent-city-workers-after-vision-loss.patch
 #   Fix to inconsistent city state
 #   RM #472
+# 0049-Trigger-action-system-when-client-requests-activity-.patch
+#   Activity action fix (esp. Pillage)
+#   osdn #57670
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -57,6 +60,7 @@ declare -a PATCHLIST=(
   "backports/0050-Initialize-extra-before-calling-unit_assign_specific"
   "backports/0050-savegame-Fix-loading-invalid-resources-on-FoW-map"
   "backports/0054-Fix-inconsistent-city-workers-after-vision-loss"
+  "backports/0049-Trigger-action-system-when-client-requests-activity-"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
