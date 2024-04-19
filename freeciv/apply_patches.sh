@@ -30,6 +30,9 @@
 # 0049-Trigger-action-system-when-client-requests-activity-.patch
 #   Activity action fix (esp. Pillage)
 #   osdn #57670
+# 0060-Check-C23-nullptr-usability-as-a-sentinel.patch
+#   C23 compile fix
+#   RM #475
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -61,6 +64,7 @@ declare -a PATCHLIST=(
   "backports/0050-savegame-Fix-loading-invalid-resources-on-FoW-map"
   "backports/0054-Fix-inconsistent-city-workers-after-vision-loss"
   "backports/0049-Trigger-action-system-when-client-requests-activity-"
+  "backports/0060-Check-C23-nullptr-usability-as-a-sentinel"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
