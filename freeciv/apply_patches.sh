@@ -6,9 +6,6 @@
 # https://osdn.net/projects/freeciv/ticket/?????
 # https://redmine.freeciv.org/issues/???
 #
-# 0041-Stop-sending-hidden-resources-to-the-client.patch
-#   Extra visibility fix
-#   RM #350
 # 0051-Adjust-nationality-of-remaining-units-after-player-r.patch
 #   Fix to player removal
 #   RM #383
@@ -50,7 +47,6 @@ declare -a GIT_PATCHLIST=(
 )
 
 declare -a PATCHLIST=(
-  "backports/0041-Stop-sending-hidden-resources-to-the-client"
   "backports/0051-Adjust-nationality-of-remaining-units-after-player-r"
   "backports/0038-AI-Delay-war-declaration-until-really-revolted"
   "backports/0053-AI-Fix-bad-city-spot-value-calculation-with-unknown-"
