@@ -6,9 +6,6 @@
 # https://osdn.net/projects/freeciv/ticket/?????
 # https://redmine.freeciv.org/issues/???
 #
-# 0041-Stop-sending-hidden-resources-to-the-client.patch
-#   Extra visibility fix
-#   RM #350
 # 0051-Adjust-nationality-of-remaining-units-after-player-r.patch
 #   Fix to player removal
 #   RM #383
@@ -27,6 +24,15 @@
 # 0050-savegame-Fix-loading-invalid-resources-on-FoW-map.patch
 #   Savegame resources loading fix
 #   RM #463
+# 0054-Fix-inconsistent-city-workers-after-vision-loss.patch
+#   Fix to inconsistent city state
+#   RM #472
+# 0049-Trigger-action-system-when-client-requests-activity-.patch
+#   Activity action fix (esp. Pillage)
+#   osdn #57670
+# 0060-Check-C23-nullptr-usability-as-a-sentinel.patch
+#   C23 compile fix
+#   RM #475
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -50,13 +56,15 @@ declare -a GIT_PATCHLIST=(
 )
 
 declare -a PATCHLIST=(
-  "backports/0041-Stop-sending-hidden-resources-to-the-client"
   "backports/0051-Adjust-nationality-of-remaining-units-after-player-r"
   "backports/0038-AI-Delay-war-declaration-until-really-revolted"
   "backports/0053-AI-Fix-bad-city-spot-value-calculation-with-unknown-"
   "backports/0034-update_bulbs-Fix-research-researching_saved-research"
   "backports/0050-Initialize-extra-before-calling-unit_assign_specific"
   "backports/0050-savegame-Fix-loading-invalid-resources-on-FoW-map"
+  "backports/0054-Fix-inconsistent-city-workers-after-vision-loss"
+  "backports/0049-Trigger-action-system-when-client-requests-activity-"
+  "backports/0060-Check-C23-nullptr-usability-as-a-sentinel"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
