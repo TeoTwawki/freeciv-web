@@ -1,0 +1,36 @@
+From 08477c234f5f05120116a3901ea87964368b62b3 Mon Sep 17 00:00:00 2001
+From: Marko Lindqvist <cazfi74@gmail.com>
+Date: Wed, 10 Apr 2024 03:29:33 +0300
+Subject: [PATCH 46/47] Fix freeciv-web build
+
+See RM #435
+
+Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
+---
+ server/citytools.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/server/citytools.c b/server/citytools.c
+index 03430daa79..24fc2bad71 100644
+--- a/server/citytools.c
++++ b/server/citytools.c
+@@ -2689,6 +2689,7 @@ void package_city(struct city *pcity, struct packet_city_info *packet,
+ #ifdef FREECIV_WEB
+   if (web_packet != nullptr) {
+     struct tile *pcenter = city_tile(pcity);
++    const struct civ_map *nmap = &(wld.map);
+ 
+     BV_CLR_ALL(web_packet->can_build_unit);
+     BV_CLR_ALL(web_packet->can_build_improvement);
+@@ -2719,7 +2720,7 @@ void package_city(struct city *pcity, struct packet_city_info *packet,
+     } unit_type_iterate_end;
+ 
+     i = 0;
+-    city_tile_iterate(city_map_radius_sq_get(pcity), pcenter, ptile) {
++    city_tile_iterate(nmap, city_map_radius_sq_get(pcity), pcenter, ptile) {
+       web_packet->output_food[i] = city_tile_output_now(pcity, ptile, O_FOOD);
+       web_packet->output_shield[i] = city_tile_output_now(pcity, ptile, O_SHIELD);
+       web_packet->output_trade[i] = city_tile_output_now(pcity, ptile, O_TRADE);
+-- 
+2.43.0
+
