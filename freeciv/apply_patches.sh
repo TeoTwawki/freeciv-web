@@ -9,9 +9,6 @@
 # 0038-AI-Delay-war-declaration-until-really-revolted.patch
 #   AI senate dismissal fix
 #   osdn #48018
-# 0053-AI-Fix-bad-city-spot-value-calculation-with-unknown-.patch
-#   AI city spot evaluation fix
-#   RM #408
 # 0046-Fix-freeciv-web-build.patch
 #   Freeciv-web build fix
 #   RM #435
@@ -57,7 +54,6 @@ declare -a GIT_PATCHLIST=(
 
 declare -a PATCHLIST=(
   "backports/0038-AI-Delay-war-declaration-until-really-revolted"
-  "backports/0053-AI-Fix-bad-city-spot-value-calculation-with-unknown-"
   "backports/0046-Fix-freeciv-web-build"
   "backports/0034-update_bulbs-Fix-research-researching_saved-research"
   "backports/0050-Initialize-extra-before-calling-unit_assign_specific"
