@@ -30,6 +30,12 @@
 # 0060-Check-C23-nullptr-usability-as-a-sentinel.patch
 #   C23 compile fix
 #   RM #475
+# 0048-Handle-CoastStrict-units-correctly-on-city-removal.patch
+#   Fix to unit placement after city destruction
+#   RM #525
+# 0061-savegame-Correct-loading-last-turn-change-time.patch
+#   Savegame loading fix
+#   RM #545
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -61,6 +67,8 @@ declare -a PATCHLIST=(
   "backports/0054-Fix-inconsistent-city-workers-after-vision-loss"
   "backports/0049-Trigger-action-system-when-client-requests-activity-"
   "backports/0060-Check-C23-nullptr-usability-as-a-sentinel"
+  "backports/0048-Handle-CoastStrict-units-correctly-on-city-removal"
+  "backports/0061-savegame-Correct-loading-last-turn-change-time"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
