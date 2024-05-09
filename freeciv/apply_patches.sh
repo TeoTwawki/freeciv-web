@@ -33,6 +33,9 @@
 # 0061-savegame-Correct-loading-last-turn-change-time.patch
 #   Savegame loading fix
 #   RM #545
+# 0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-.patch
+#   Savegame loading fix
+#   RM #577
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -65,6 +68,7 @@ declare -a PATCHLIST=(
   "backports/0060-Check-C23-nullptr-usability-as-a-sentinel"
   "backports/0048-Handle-CoastStrict-units-correctly-on-city-removal"
   "backports/0061-savegame-Correct-loading-last-turn-change-time"
+  "backports/0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
