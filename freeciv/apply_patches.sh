@@ -6,9 +6,6 @@
 # https://osdn.net/projects/freeciv/ticket/?????
 # https://redmine.freeciv.org/issues/???
 #
-# 0046-Fix-freeciv-web-build.patch
-#   Freeciv-web build fix
-#   RM #435
 # 0034-update_bulbs-Fix-research-researching_saved-research.patch
 #   Fix to research assert failure
 #   RM #449
@@ -59,7 +56,6 @@ declare -a GIT_PATCHLIST=(
 )
 
 declare -a PATCHLIST=(
-  "backports/0046-Fix-freeciv-web-build"
   "backports/0034-update_bulbs-Fix-research-researching_saved-research"
   "backports/0050-Initialize-extra-before-calling-unit_assign_specific"
   "backports/0050-savegame-Fix-loading-invalid-resources-on-FoW-map"
