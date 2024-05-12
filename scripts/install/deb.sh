@@ -33,7 +33,6 @@ dependencies="\
   maven \
   mariadb-server \
   nginx \
-  openjdk-17-jdk-headless \
   patch \
   pkg-config \
   pngcrush \
@@ -73,6 +72,14 @@ if [ $(lsb_release -rs) = "testing" ] && [ $(lsb_release -is) = "Debian" ] \
   INSTALLED_NODEJS=Y
 else
   INSTALLED_NODEJS=N
+fi
+
+# Install openjdk-21-jdk-headless, if available.
+# Otherwise install openjdk-17-jdk-headless
+if apt-get --simulate install openjdk-21-jdk-headless &> /dev/null; then
+  dependencies="${dependencies} openjdk-21-jdk-headless"
+else
+  dependencies="${dependencies} openjdk-17-jdk-headless"
 fi
 
 # Install lua-5.4, if available. Otherwise it will be built from the copy
