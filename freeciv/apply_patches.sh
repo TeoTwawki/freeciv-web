@@ -36,6 +36,9 @@
 # 0077-Meson-Make-pack_client-to-depend-on-verhdr.patch
 #   Build fix
 #   RM #596
+# 0080-savegame-Save-ACTION_NONE-as-1.patch
+#   Savegame loading fix
+#   RM #598
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -69,6 +72,7 @@ declare -a PATCHLIST=(
   "backports/0061-savegame-Correct-loading-last-turn-change-time"
   "backports/0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-"
   "backports/0077-Meson-Make-pack_client-to-depend-on-verhdr"
+  "backports/0080-savegame-Save-ACTION_NONE-as-1"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
