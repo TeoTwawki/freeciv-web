@@ -39,6 +39,9 @@
 # 0080-savegame-Save-ACTION_NONE-as-1.patch
 #   Savegame loading fix
 #   RM #598
+# 0068-Meson-Make-libfreeciv-to-depend-on-gitrev.patch
+#   Build fix
+#   RM #597
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -73,6 +76,7 @@ declare -a PATCHLIST=(
   "backports/0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-"
   "backports/0077-Meson-Make-pack_client-to-depend-on-verhdr"
   "backports/0080-savegame-Save-ACTION_NONE-as-1"
+  "backports/0068-Meson-Make-libfreeciv-to-depend-on-gitrev"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
