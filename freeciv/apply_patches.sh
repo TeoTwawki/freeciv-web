@@ -6,9 +6,6 @@
 # https://osdn.net/projects/freeciv/ticket/?????
 # https://redmine.freeciv.org/issues/???
 #
-# 0038-AI-Delay-war-declaration-until-really-revolted.patch
-#   AI senate dismissal fix
-#   osdn #48018
 # 0046-Fix-freeciv-web-build.patch
 #   Freeciv-web build fix
 #   RM #435
@@ -36,6 +33,9 @@
 # 0061-savegame-Correct-loading-last-turn-change-time.patch
 #   Savegame loading fix
 #   RM #545
+# 0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-.patch
+#   Savegame loading fix
+#   RM #577
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -59,7 +59,6 @@ declare -a GIT_PATCHLIST=(
 )
 
 declare -a PATCHLIST=(
-  "backports/0038-AI-Delay-war-declaration-until-really-revolted"
   "backports/0046-Fix-freeciv-web-build"
   "backports/0034-update_bulbs-Fix-research-researching_saved-research"
   "backports/0050-Initialize-extra-before-calling-unit_assign_specific"
@@ -69,6 +68,7 @@ declare -a PATCHLIST=(
   "backports/0060-Check-C23-nullptr-usability-as-a-sentinel"
   "backports/0048-Handle-CoastStrict-units-correctly-on-city-removal"
   "backports/0061-savegame-Correct-loading-last-turn-change-time"
+  "backports/0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
