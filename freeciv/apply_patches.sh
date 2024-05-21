@@ -30,7 +30,7 @@
 # 0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-.patch
 #   Savegame loading fix
 #   RM #577
-# 0077-Meson-Make-pack_client-to-depend-on-verhdr.patch
+# 0089-Meson-Make-fc_client_common-to-depend-on-verhdr.patch
 #   Build fix
 #   RM #596
 # 0080-savegame-Save-ACTION_NONE-as-1.patch
@@ -70,7 +70,7 @@ declare -a PATCHLIST=(
   "backports/0048-Handle-CoastStrict-units-correctly-on-city-removal"
   "backports/0061-savegame-Correct-loading-last-turn-change-time"
   "backports/0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-"
-  "backports/0077-Meson-Make-pack_client-to-depend-on-verhdr"
+  "backports/0089-Meson-Make-fc_client_common-to-depend-on-verhdr"
   "backports/0080-savegame-Save-ACTION_NONE-as-1"
   "backports/0068-Meson-Make-libfreeciv-to-depend-on-gitrev"
   "RevertAmplio2ExtraUnits"
