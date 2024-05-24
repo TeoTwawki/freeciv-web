@@ -1,6 +1,6 @@
 diff -Nurd freeciv/common/featured_text.c freeciv/common/featured_text.c
---- freeciv/common/featured_text.c	2023-10-02 22:42:27.773708168 +0300
-+++ freeciv/common/featured_text.c	2023-10-02 22:43:29.830360463 +0300
+--- freeciv/common/featured_text.c	2024-05-18 00:35:47.171455034 +0300
++++ freeciv/common/featured_text.c	2024-05-18 00:35:56.371542975 +0300
 @@ -74,7 +74,7 @@
  
  const struct ft_color ftc_warning       = FT_COLOR("#FF0000",   nullptr);
@@ -47,9 +47,9 @@ diff -Nurd freeciv/common/featured_text.c freeciv/common/featured_text.c
  }
  
 diff -Nurd freeciv/server/srv_main.c freeciv/server/srv_main.c
---- freeciv/server/srv_main.c	2023-10-02 22:42:28.529716131 +0300
-+++ freeciv/server/srv_main.c	2023-10-02 22:42:38.921825554 +0300
-@@ -2580,7 +2580,12 @@
+--- freeciv/server/srv_main.c	2024-05-18 00:35:47.567458819 +0300
++++ freeciv/server/srv_main.c	2024-05-18 00:35:56.371542975 +0300
+@@ -2627,7 +2627,12 @@
    pplayer->style = style_of_nation(pnation);
  
    if (set_name) {

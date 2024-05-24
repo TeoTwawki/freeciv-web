@@ -1,7 +1,7 @@
 diff -Nurd freeciv/common/networking/packets.def freeciv/common/networking/packets.def
---- freeciv/common/networking/packets.def	2023-10-29 13:48:12.627769696 +0200
-+++ freeciv/common/networking/packets.def	2023-10-29 13:48:22.407818344 +0200
-@@ -2461,3 +2461,13 @@
+--- freeciv/common/networking/packets.def	2024-05-18 00:46:38.885812349 +0300
++++ freeciv/common/networking/packets.def	2024-05-18 00:46:49.709919374 +0300
+@@ -2468,3 +2468,13 @@
    TILE dest;
    UINT32 turns;
  end
@@ -16,8 +16,8 @@ diff -Nurd freeciv/common/networking/packets.def freeciv/common/networking/packe
 +  STRING message[MAX_LEN_MSG];
 +end
 diff -Nurd freeciv/server/maphand.c freeciv/server/maphand.c
---- freeciv/server/maphand.c	2023-10-29 13:48:13.143772263 +0200
-+++ freeciv/server/maphand.c	2023-10-29 14:07:13.112339222 +0200
+--- freeciv/server/maphand.c	2024-05-18 00:46:39.253815986 +0300
++++ freeciv/server/maphand.c	2024-05-18 00:46:49.709919374 +0300
 @@ -16,6 +16,7 @@
  #endif
  
@@ -34,7 +34,7 @@ diff -Nurd freeciv/server/maphand.c freeciv/server/maphand.c
  #include "events.h"
  #include "game.h"
  #include "map.h"
-@@ -2688,3 +2690,380 @@
+@@ -2729,3 +2731,380 @@
      }
    }
  }
@@ -416,8 +416,8 @@ diff -Nurd freeciv/server/maphand.c freeciv/server/maphand.c
 +  astr_free(&str);
 +}
 diff -Nurd freeciv/server/maphand.h freeciv/server/maphand.h
---- freeciv/server/maphand.h	2023-10-29 13:48:13.143772263 +0200
-+++ freeciv/server/maphand.h	2023-10-29 13:48:22.407818344 +0200
+--- freeciv/server/maphand.h	2024-05-18 00:46:39.253815986 +0300
++++ freeciv/server/maphand.h	2024-05-18 00:46:49.709919374 +0300
 @@ -147,4 +147,7 @@
  void tile_change_side_effects(struct tile *ptile, bool refresh_city)
    fc__attribute((nonnull (1)));
