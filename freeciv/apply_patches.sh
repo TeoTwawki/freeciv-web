@@ -9,9 +9,6 @@
 # 0034-update_bulbs-Fix-research-researching_saved-research.patch
 #   Fix to research assert failure
 #   RM #449
-# 0050-Initialize-extra-before-calling-unit_assign_specific.patch
-#   Pillage crash fix
-#   RM #460
 # 0050-savegame-Fix-loading-invalid-resources-on-FoW-map.patch
 #   Savegame resources loading fix
 #   RM #463
@@ -33,7 +30,7 @@
 # 0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-.patch
 #   Savegame loading fix
 #   RM #577
-# 0077-Meson-Make-pack_client-to-depend-on-verhdr.patch
+# 0089-Meson-Make-fc_client_common-to-depend-on-verhdr.patch
 #   Build fix
 #   RM #596
 # 0080-savegame-Save-ACTION_NONE-as-1.patch
@@ -42,6 +39,9 @@
 # 0068-Meson-Make-libfreeciv-to-depend-on-gitrev.patch
 #   Build fix
 #   RM #597
+# 0077-city_freeze_workers_queue-Set-needs_arrange-for-citi.patch
+#   City status legality fix
+#   RM #661
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -66,7 +66,6 @@ declare -a GIT_PATCHLIST=(
 
 declare -a PATCHLIST=(
   "backports/0034-update_bulbs-Fix-research-researching_saved-research"
-  "backports/0050-Initialize-extra-before-calling-unit_assign_specific"
   "backports/0050-savegame-Fix-loading-invalid-resources-on-FoW-map"
   "backports/0054-Fix-inconsistent-city-workers-after-vision-loss"
   "backports/0049-Trigger-action-system-when-client-requests-activity-"
@@ -74,9 +73,10 @@ declare -a PATCHLIST=(
   "backports/0048-Handle-CoastStrict-units-correctly-on-city-removal"
   "backports/0061-savegame-Correct-loading-last-turn-change-time"
   "backports/0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-"
-  "backports/0077-Meson-Make-pack_client-to-depend-on-verhdr"
+  "backports/0089-Meson-Make-fc_client_common-to-depend-on-verhdr"
   "backports/0080-savegame-Save-ACTION_NONE-as-1"
   "backports/0068-Meson-Make-libfreeciv-to-depend-on-gitrev"
+  "backports/0077-city_freeze_workers_queue-Set-needs_arrange-for-citi"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
