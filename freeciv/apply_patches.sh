@@ -30,6 +30,9 @@
 # 0068-Meson-Make-libfreeciv-to-depend-on-gitrev.patch
 #   Build fix
 #   RM #597
+# 0074-Meson-Make-fc_server-to-depend-on-verhdr.patch
+#   Build fix
+#   RM #682
 # 0077-city_freeze_workers_queue-Set-needs_arrange-for-citi.patch
 #   City status legality fix
 #   RM #661
@@ -64,6 +67,7 @@ declare -a PATCHLIST=(
   "backports/0089-Meson-Make-fc_client_common-to-depend-on-verhdr"
   "backports/0080-savegame-Save-ACTION_NONE-as-1"
   "backports/0068-Meson-Make-libfreeciv-to-depend-on-gitrev"
+  "backports/0074-Meson-Make-fc_server-to-depend-on-verhdr"
   "backports/0077-city_freeze_workers_queue-Set-needs_arrange-for-citi"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
