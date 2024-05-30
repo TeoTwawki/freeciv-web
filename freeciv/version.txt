@@ -1,7 +1,7 @@
 # The Git SHA hash for the commit to checkout from
 # https://github.com/freeciv/freeciv
 
-FCREV=fa39b51180ae53a41309f231ba4556d1c46f3678
+FCREV=861a93b2a4909d0e134b7112ac33fab82d0be9e5
 
 ORIGCAPSTR="+Freeciv.Devel-\${MAIN_VERSION}-2024.Apr.23b"
 
