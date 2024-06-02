@@ -7,7 +7,7 @@ on:
 
 jobs:
   normal:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/setup-java@v4.2.1
         with:
@@ -24,4 +24,4 @@ jobs:
           sudo rm -rf /var/lib/mysql
       - name: install
         shell: bash
-        run: ./scripts/install/install.sh --mode=TEST
+        run: PIP_SKIP=Y ./scripts/install/install.sh --mode=TEST
