@@ -9,15 +9,9 @@
 # 0050-savegame-Fix-loading-invalid-resources-on-FoW-map.patch
 #   Savegame resources loading fix
 #   RM #463
-# 0054-Fix-inconsistent-city-workers-after-vision-loss.patch
-#   Fix to inconsistent city state
-#   RM #472
 # 0049-Trigger-action-system-when-client-requests-activity-.patch
 #   Activity action fix (esp. Pillage)
 #   osdn #57670
-# 0060-Check-C23-nullptr-usability-as-a-sentinel.patch
-#   C23 compile fix
-#   RM #475
 # 0048-Handle-CoastStrict-units-correctly-on-city-removal.patch
 #   Fix to unit placement after city destruction
 #   RM #525
@@ -36,6 +30,9 @@
 # 0068-Meson-Make-libfreeciv-to-depend-on-gitrev.patch
 #   Build fix
 #   RM #597
+# 0074-Meson-Make-fc_server-to-depend-on-verhdr.patch
+#   Build fix
+#   RM #682
 # 0077-city_freeze_workers_queue-Set-needs_arrange-for-citi.patch
 #   City status legality fix
 #   RM #661
@@ -63,15 +60,14 @@ declare -a GIT_PATCHLIST=(
 
 declare -a PATCHLIST=(
   "backports/0050-savegame-Fix-loading-invalid-resources-on-FoW-map"
-  "backports/0054-Fix-inconsistent-city-workers-after-vision-loss"
   "backports/0049-Trigger-action-system-when-client-requests-activity-"
-  "backports/0060-Check-C23-nullptr-usability-as-a-sentinel"
   "backports/0048-Handle-CoastStrict-units-correctly-on-city-removal"
   "backports/0061-savegame-Correct-loading-last-turn-change-time"
   "backports/0073-savecompat-Fix-adding-ACTION_NONE-actions-for-units-"
   "backports/0089-Meson-Make-fc_client_common-to-depend-on-verhdr"
   "backports/0080-savegame-Save-ACTION_NONE-as-1"
   "backports/0068-Meson-Make-libfreeciv-to-depend-on-gitrev"
+  "backports/0074-Meson-Make-fc_server-to-depend-on-verhdr"
   "backports/0077-city_freeze_workers_queue-Set-needs_arrange-for-citi"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"

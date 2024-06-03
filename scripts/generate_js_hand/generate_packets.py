@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: latin-1 -*-
-
 #
 # Freeciv - Copyright (C) 2003 - Raimar Falke
 #   This program is free software; you can redistribute it and/or modify
@@ -532,7 +531,7 @@ class Variant:
         self.type=packet.type
         self.delta=packet.delta
         self.is_info=packet.is_info
-        self.cancel=packet.cancel
+        self.reset=packet.reset
         self.want_force=packet.want_force
 
         self.poscaps=poscaps
@@ -825,8 +824,8 @@ static char *stats_%(name)s_names[] = {%(names)s};
   hash_insert(*hash, clone, clone);
 '''
 
-        # Cancel some is-info packets.
-        for i in self.cancel:
+        # Reset some is-info packets.
+        for i in self.reset:
             body=body+'''
   hash = &pc->phs.sent[%s];
   if (NULL != *hash) {
@@ -1005,12 +1004,12 @@ class Packet:
         self.want_force="force" in arr
         if self.want_force: arr.remove("force")
 
-        self.cancel=[]
+        self.reset=[]
         remaining=[]
         for i in arr:
-            mo=re.search("^cancel\((.*)\)$",i)
+            mo=re.search("^reset\((.*)\)$",i)
             if mo:
-                self.cancel.append(mo.group(1))
+                self.reset.append(mo.group(1))
                 continue
             remaining.append(i)
         arr=remaining
