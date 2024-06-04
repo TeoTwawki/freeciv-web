@@ -30,6 +30,9 @@
 # 0077-city_freeze_workers_queue-Set-needs_arrange-for-citi.patch
 #   City status legality fix
 #   RM #661
+# 0068-AI-Remove-shared-vision-from-pending-war-target-once.patch
+#   AI assert fix
+#   RM #701
 
 # Not in the upstream Freeciv server
 # ----------------------------------
@@ -61,6 +64,7 @@ declare -a PATCHLIST=(
   "backports/0068-Meson-Make-libfreeciv-to-depend-on-gitrev"
   "backports/0074-Meson-Make-fc_server-to-depend-on-verhdr"
   "backports/0077-city_freeze_workers_queue-Set-needs_arrange-for-citi"
+  "backports/0068-AI-Remove-shared-vision-from-pending-war-target-once"
   "RevertAmplio2ExtraUnits"
   "meson_webperimental"
   "metachange"
